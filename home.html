@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-[#D9D9D9] text-gray-800">
+    <header class="p-4 border-b border-black">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-lg font-semibold text-[#663300]">
+                <img src="asset/RAFF.png" alt="RAFF COFFEE ORIGINAL" class="h-8">
+            </div>
+    
+            <!-- Menu Items -->
+            <ul id="mobile-menu" class="hidden flex-col md:flex md:flex-row md:space-x-6 text-black font-medium">
+                <li><a href="home.html" class="text-[#663300] font-bold hover:text-gray-700">Home</a></li>
+                <li><a href="catalog.html" class="hover:text-gray-700">Catalog</a></li>
+                <li><a href="about_us.html" class="hover:text-gray-700">About Us</a></li>
+                <li><a href="contact.html" class="hover:text-gray-700">Contact</a></li>
+            </ul>
+    
+            <!-- Hamburger Button -->
+            <button id="menu-toggle" class="md:hidden block text-[#663300] focus:outline-none">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mt-2 mx-auto p-10 flex flex-col md:flex-row">
+        <!-- Left Content -->
+        <div class="md:w-1/2 text-left md:text-left">
+            <h1 class="text-5xl font-bold text-[#663300] mb-6">RAFF COFFEE ORIGINAL</h1>
+            <p class="text-xl font-bold mb-4">Mixing Flavors, Welcoming the World.</p>
+            <p class="text-gray-700 leading-relaxed mb-8">"Welcome to Raff Coffee Original, a start-up coffee company that delivers authentic taste from selected coffee beans. We are committed to providing the best coffee experience, from the plantation to your cup."</p>
+            <a href="about_us.html" class="inline-block bg-white text-[#663300] px-6 py-3 rounded border border-[#663300] hover:bg-[#663300] hover:text-white">Learn More ></a>
+        </div>
+
+        <!-- Right Image Placeholder -->
+        <div class="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+            <img src="asset\coffe_bag.png" alt="Coffee Beans" class="w-4/5 h-auto object-cover">
+        </div>
+    </main>
+
+    <!-- Bottom Banner -->
+    <footer class="w-full bg-[#D9D9D9] mt-auto flex items-center justify-center">
+        <img src="asset\coffee_beans.png" alt="Coffee Banner" class="w-full">
+    </footer>    
+
+    <!-- Responsiveness -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }
+        });
+    </script>
+</body>
+</html>
